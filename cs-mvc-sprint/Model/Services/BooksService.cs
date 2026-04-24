@@ -9,6 +9,7 @@ namespace cs_mvc_sprint.Model.Services
         public Book GetBookById(int id);
         public void AddBook(Book book);
         public bool DeleteBook(int id);
+        public List<Book> GetBooksByAuthorId(int id);
     }
     public class BooksService : IBooksService
     {
@@ -36,6 +37,11 @@ namespace cs_mvc_sprint.Model.Services
         public bool DeleteBook(int id)
         {
             return _booksRepository.RemoveBook(id);
+        }
+
+        public List<Book> GetBooksByAuthorId(int id)
+        {
+            return _booksRepository.GrabBooksByAuthorId(id);
         }
     }
 }

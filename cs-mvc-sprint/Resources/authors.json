@@ -1,56 +1,52 @@
 [
   {
-    "Id": 0,
-    "Title": "1984",
-    "Author": "George Orwell",
-    "Year": 1949
-  },
-  {
     "Id": 1,
-    "Title": "The Analects",
-    "Author": "Confucius",
-    "Year": -475
+    "Name": "George Orwell",
+    "Nationality": "British"
   },
   {
     "Id": 2,
-    "Title": "Evie\u2019s Adventure",
-    "Author": "Evie Pom",
-    "Year": 2024
+    "Name": "Confucius",
+    "Nationality": "Chinese"
   },
   {
     "Id": 3,
-    "Title": "War and Peace",
-    "Author": "Leo Tolstoy",
-    "Year": 1869
+    "Name": "Evie Pom",
+    "Nationality": "German"
   },
   {
     "Id": 4,
-    "Title": "Pride and Prejudice",
-    "Author": "Jane Austen",
-    "Year": 1813
+    "Name": "Leo Tolstoy",
+    "Nationality": "Russian"
   },
   {
     "Id": 5,
-    "Title": "One Hundred Years of Solitude",
-    "Author": "Gabriel Garcia Marquez",
-    "Year": 1967
+    "Name": "Jane Austen",
+    "Nationality": "British"
   },
   {
     "Id": 6,
-    "Title": "The Odyssey",
-    "Author": "Homer",
-    "Year": -800
+    "Name": "Gabriel Garcia Marquez",
+    "Nationality": "Colombian"
   },
   {
     "Id": 7,
-    "Title": "The Adventures of Tom Sawyer",
-    "Author": "Mark Twain",
-    "Year": 1876
+    "Name": "Homer",
+    "Nationality": "Ancient Greek"
   },
   {
     "Id": 8,
-    "Title": "Mrs Dalloway",
-    "Author": "Virginia Woolf",
-    "Year": 1925
+    "Name": "Mark Twain",
+    "Nationality": "American"
+  },
+  {
+    "Id": 9,
+    "Name": "Virginia Woolf",
+    "Nationality": "British"
+  },
+  {
+    "Id": 10,
+    "Name": "Haruki Murakami",
+    "Nationality": "Japanese"
   }
 ]

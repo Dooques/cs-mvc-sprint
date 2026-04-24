@@ -30,6 +30,13 @@ namespace cs_mvc_sprint.Controllers
             return Ok(_booksService.GetBookById(id));
         }
 
+        [HttpGet]
+        [Route("authors/{id}")]
+        public IActionResult GetBooksByAuthorId(int id)
+        {
+            return Ok(_booksService.GetBooksByAuthorId(id));
+        }
+
         [HttpPost]
         public IActionResult AddBook(Book book)
         {

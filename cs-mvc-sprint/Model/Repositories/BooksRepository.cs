@@ -10,6 +10,7 @@ namespace cs_mvc_sprint.Model.Repositories
         public Book FetchBookById(int id);
         public void PostBook(Book book);
         public bool RemoveBook(int id);
+        public List<Book> GrabBooksByAuthorId(int id);
     }
 
     public class BooksRepository : IBooksRepository
@@ -65,6 +66,21 @@ namespace cs_mvc_sprint.Model.Repositories
                 return true;
             }
             return false;
+        }
+
+        public List<Book> GrabBooksByAuthorId(int id)
+        {
+            var path = Environment.GetEnvironmentVariable("MYPATH");
+            Console.WriteLine(path);
+            var books = JsonSerializer.Deserialize<List<Book>>(
+                JsonReader.ReadFile(path + "books")
+                );
+            Author? author = JsonSerializer.Deserialize<List<Author>>(
+            JsonReader.ReadFile(path + "authors")
+            ).First(a => a.Id == id);
+            var booksByAuthor = books.Where(b => b.Author == author.Name).ToList();
+            books.ForEach(b => Console.WriteLine(b.Title));
+            return booksByAuthor;
         }
     }
 }
