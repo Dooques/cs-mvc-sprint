@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cs-mvc-sprint")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce31f82d210100ff334545ac3029a542d2275efa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+016193d562013741a8540be236ef8739227af018")]
 [assembly: System.Reflection.AssemblyProductAttribute("cs-mvc-sprint")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cs-mvc-sprint")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
