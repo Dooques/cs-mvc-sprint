@@ -14,6 +14,8 @@ namespace cs_mvc_sprint
 
             builder.Services.AddScoped<IAuthorsService, AuthorsService>();
             builder.Services.AddScoped<IAuthorsRepository, AuthorsRepository>();
+            builder.Services.AddScoped<IBooksService, BooksService>();
+            builder.Services.AddScoped<IBooksRepository, BooksRepository>();
 
             builder.Services.AddControllers();
 
