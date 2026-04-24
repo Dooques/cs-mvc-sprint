@@ -44,5 +44,16 @@ namespace cs_mvc_sprint.Controllers
                 return BadRequest();
             }
         }
+
+        [HttpDelete]
+        [Route("{id}")]
+        public IActionResult DeteleBook(int id)
+        {
+            if (_booksService.DeleteBook(id))
+            {
+                return NoContent();
+            }
+            return NotFound();
+        }
     }
 }

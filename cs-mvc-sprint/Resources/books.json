@@ -13,7 +13,7 @@
   },
   {
     "Id": 2,
-    "Title": "Evie’s Adventure",
+    "Title": "Evie\u2019s Adventure",
     "Author": "Evie Pom",
     "Year": 2024
   },
@@ -52,11 +52,5 @@
     "Title": "Mrs Dalloway",
     "Author": "Virginia Woolf",
     "Year": 1925
-  },
-  {
-    "Id": 9,
-    "Title": "Norwegian Wood",
-    "Author": "Haruki Murakami",
-    "Year": 1987
   }
 ]

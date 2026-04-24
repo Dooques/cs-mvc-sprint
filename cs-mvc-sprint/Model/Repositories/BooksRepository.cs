@@ -8,7 +8,8 @@ namespace cs_mvc_sprint.Model.Repositories
     {
         public List<Book> FetchAllBooks();
         public Book FetchBookById(int id);
-        public void PostBook(Book book); 
+        public void PostBook(Book book);
+        public bool RemoveBook(int id);
     }
 
     public class BooksRepository : IBooksRepository
@@ -44,7 +45,26 @@ namespace cs_mvc_sprint.Model.Repositories
                 );
             book.Id = booksList.Count;
             booksList.Add(book);
-            JsonReader.WriteFile(path + "authors", booksList);
+            JsonReader.WriteFile(path + "books", booksList);
+        }
+
+        public bool RemoveBook(int id)
+        {
+            var path = Environment.GetEnvironmentVariable("MYPATH");
+            Console.WriteLine(path);
+            var booksList = JsonSerializer.Deserialize<List<Book>>(
+                JsonReader.ReadFile(
+                    path + "books"
+                    )
+                );
+            Book? bookRemoval = booksList.Find(b => b.Id == id);
+            if(bookRemoval != null)
+            {
+                booksList.Remove(bookRemoval);
+                JsonReader.WriteFile(path + "books", booksList);
+                return true;
+            }
+            return false;
         }
     }
 }

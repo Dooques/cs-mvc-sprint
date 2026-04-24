@@ -33,7 +33,7 @@ namespace cs_mvc_sprint.Model.Repositories
                     path + "authors"
                     )
                 );
-            return author[id - 1];
+            return author[id];
         }
 
         public bool PostAuthor(Author author)
