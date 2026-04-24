@@ -3,6 +3,7 @@ using cs_mvc_sprint.Models;
 using Microsoft.AspNetCore.Mvc;
 using cs_mvc_sprint.Utils;
 using cs_mvc_sprint.Model.Services;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace cs_mvc_sprint.Controllers
 {
@@ -20,6 +21,12 @@ namespace cs_mvc_sprint.Controllers
         public IActionResult GetAllAuthors()
         {
             return Ok(_authorsService.GetAllAuthors());
+        }
+
+        [Route("{id}")]
+        public IActionResult GetAuthorById(int id)
+        {
+            return Ok(_authorsService.GetAuthorById(id));
         }
     }
 }
