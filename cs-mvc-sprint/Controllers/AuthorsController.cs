@@ -40,5 +40,16 @@ namespace cs_mvc_sprint.Controllers
             }
             else return BadRequest();
         }
+
+        [HttpDelete]
+        [Route("{id}")]
+        public IActionResult DeleteAuthor(int id)
+        {
+            if (_authorsService.DeleteAuthor(id))
+            {
+                return NoContent();
+            }
+            else return NotFound();
+        }
     }
 }

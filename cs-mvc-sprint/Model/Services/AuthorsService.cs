@@ -8,6 +8,7 @@ namespace cs_mvc_sprint.Model.Services
         public List<Author> GetAllAuthors();
         public Author GetAuthorById(int id);
         public bool AddAuthor(Author author);
+        public bool DeleteAuthor(int id);
     }
     public class AuthorsService : IAuthorsService
     {
@@ -32,6 +33,12 @@ namespace cs_mvc_sprint.Model.Services
         {
             _authorRepository.PostAuthor(author);
             return true;
+        }
+
+        public bool DeleteAuthor(int id)
+        {
+            return _authorRepository.RemoveAuthor(id);
+
         }
     }
 }

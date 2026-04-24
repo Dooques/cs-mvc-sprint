@@ -9,6 +9,7 @@ namespace cs_mvc_sprint.Model.Repositories
         public List<Author> FetchAllAuthors();
         public Author FetchAuthorById(int id);
         public bool PostAuthor(Author author);
+        public bool RemoveAuthor(int id);
     }
     public class AuthorsRepository : IAuthorsRepository
     {
@@ -49,6 +50,25 @@ namespace cs_mvc_sprint.Model.Repositories
             JsonReader.WriteFile(path + "authors", authorList);
             return true;
 
+        }
+
+        public bool RemoveAuthor(int id)
+        {
+            var path = Environment.GetEnvironmentVariable("MYPATH");
+            Console.WriteLine(path);
+            var authorList = JsonSerializer.Deserialize<List<Author>>(
+                JsonReader.ReadFile(
+                    path + "authors"
+                    )
+                );
+            Author? authorRemoval = authorList.Find(a => a.Id == id);
+            if (authorRemoval != null)
+            {
+                authorList.Remove(authorRemoval);
+                JsonReader.WriteFile(path + "authors", authorList);
+                return true;
+            }
+            return false;
         }
     }
 }
