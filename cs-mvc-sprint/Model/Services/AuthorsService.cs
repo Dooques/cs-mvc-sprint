@@ -7,6 +7,7 @@ namespace cs_mvc_sprint.Model.Services
     {
         public List<Author> GetAllAuthors();
         public Author GetAuthorById(int id);
+        public bool AddAuthor(Author author);
     }
     public class AuthorsService : IAuthorsService
     {
@@ -25,6 +26,12 @@ namespace cs_mvc_sprint.Model.Services
         public Author GetAuthorById(int id)
         {
             return _authorRepository.FetchAuthorById(id);
+        }
+
+        public bool AddAuthor(Author author)
+        {
+            _authorRepository.PostAuthor(author);
+            return true;
         }
     }
 }

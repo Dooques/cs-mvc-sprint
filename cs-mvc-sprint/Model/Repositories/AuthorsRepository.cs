@@ -8,6 +8,7 @@ namespace cs_mvc_sprint.Model.Repositories
     {
         public List<Author> FetchAllAuthors();
         public Author FetchAuthorById(int id);
+        public bool PostAuthor(Author author);
     }
     public class AuthorsRepository : IAuthorsRepository
     {
@@ -32,6 +33,22 @@ namespace cs_mvc_sprint.Model.Repositories
                     )
                 );
             return author[id - 1];
+        }
+
+        public bool PostAuthor(Author author)
+        {
+            var path = Environment.GetEnvironmentVariable("MYPATH");
+            Console.WriteLine(path);
+            var authorList = JsonSerializer.Deserialize<List<Author>>(
+                JsonReader.ReadFile(
+                    path + "authors"
+                    )
+                );
+            author.Id = authorList.Count+1;
+            authorList.Add(author);
+            JsonReader.WriteFile(path + "authors", authorList);
+            return true;
+
         }
     }
 }

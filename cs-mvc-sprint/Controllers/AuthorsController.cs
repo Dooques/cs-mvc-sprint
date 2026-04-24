@@ -18,15 +18,27 @@ namespace cs_mvc_sprint.Controllers
             _authorsService = authorsService;
         }
 
+        [HttpGet]
         public IActionResult GetAllAuthors()
         {
             return Ok(_authorsService.GetAllAuthors());
         }
 
+        [HttpGet]
         [Route("{id}")]
         public IActionResult GetAuthorById(int id)
         {
             return Ok(_authorsService.GetAuthorById(id));
+        }
+
+        [HttpPost]
+        public IActionResult AddAuthor(Author author)
+        {
+            if (_authorsService.AddAuthor(author))
+            {
+                return Ok(author);
+            }
+            else return BadRequest();
         }
     }
 }
