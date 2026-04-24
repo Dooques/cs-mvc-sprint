@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\My Drive\\DriveSyncFiles\\northcoders\\intro-week\\cs-mvc-sprint-sol\\cs-mvc-sprint\\cs-mvc-sprint.csproj",
+      "projectUniqueName": "C:\\Users\\samue\\OneDrive\\Documents\\northcoders\\backend\\cs-mvc-sprint-sol\\cs-mvc-sprint\\cs-mvc-sprint.csproj",
       "projectName": "cs-mvc-sprint",
-      "projectPath": "G:\\My Drive\\DriveSyncFiles\\northcoders\\intro-week\\cs-mvc-sprint-sol\\cs-mvc-sprint\\cs-mvc-sprint.csproj",
+      "projectPath": "C:\\Users\\samue\\OneDrive\\Documents\\northcoders\\backend\\cs-mvc-sprint-sol\\cs-mvc-sprint\\cs-mvc-sprint.csproj",
       "packagesPath": "C:\\Users\\samue\\.nuget\\packages\\",
-      "outputPath": "G:\\My Drive\\DriveSyncFiles\\northcoders\\intro-week\\cs-mvc-sprint-sol\\cs-mvc-sprint\\obj\\",
+      "outputPath": "C:\\Users\\samue\\OneDrive\\Documents\\northcoders\\backend\\cs-mvc-sprint-sol\\cs-mvc-sprint\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
